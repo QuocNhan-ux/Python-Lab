@@ -59,6 +59,7 @@ def load_baseline(path: Path, root: Path) -> dict[str, str]:
 
 
 def main() -> int:
+    
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("command", choices=["init", "check"])
     parser.add_argument("directory", type=Path)
@@ -66,6 +67,7 @@ def main() -> int:
     args = parser.parse_args()
     root = args.directory.resolve()
     baseline = args.baseline.resolve()
+
     try:
         if args.command == "init":
             data = {"version": 1, "root": str(root), "files": scan(root, baseline)}
@@ -75,6 +77,7 @@ def main() -> int:
                 stream.write("\n")
             print(f"Saved {len(data['files'])} file hashes to {baseline}")
             return 0
+        
         before = load_baseline(baseline, root)
         changes = compare(before, scan(root, baseline))
         for category, names in changes.items():

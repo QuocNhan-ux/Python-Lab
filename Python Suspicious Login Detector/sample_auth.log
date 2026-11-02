@@ -1,0 +1,6 @@
+Nov 1 10:00:01 server sshd[1234]: Failed password for root from 192.0.2.10 port 50001 ssh2
+Nov 1 10:00:04 server sshd[1235]: Failed password for root from 192.0.2.10 port 50002 ssh2
+Nov 1 10:00:07 server sshd[1236]: Failed password for admin from 192.0.2.10 port 50003 ssh2
+Nov 1 10:00:10 server sshd[1237]: Accepted password for student from 198.51.100.20 port 50004 ssh2
+Nov 1 10:00:13 server sshd[1238]: Failed password for guest from 198.51.100.30 port 50005 ssh2
+Nov 1 10:00:16 server sshd[1239]: Failed password for root from 192.0.2.10 port 50006 ssh2
